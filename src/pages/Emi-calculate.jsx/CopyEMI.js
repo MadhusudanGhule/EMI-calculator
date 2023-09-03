@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import styles from './Emi.module.css';
 import { tenureData } from '../utils/Constant';
-import { numWithCommas } from '../Config';
-import PieChart from './PieChart';
-
 
 const Emi = () => {
     const [cost, setCost] = useState(0);
     const [interest, setInterest] = useState(10);
-    const [ fee, setFee] = useState(1);
+    const [fee, setFee] = useState(1);
     const [downPayment, setDownPayment] = useState(0);
     const [tenure, setTenure] = useState(12);
     const [emi, setEmi] = useState(0);
@@ -54,14 +51,7 @@ const Emi = () => {
         const calculatedDp = calculateDp(emiValue);
         setDownPayment(calculatedDp);
     };
-   
-    let TotalLamt=emi*tenure
 
-    const piData={
-        totalamt:+downPayment+TotalLamt,
-        downPayment:+downPayment,
-        fee:(cost - +downPayment) * (fee / 100),    
-    }
     return (
         <>
             <div className={styles.container}>
@@ -103,26 +93,26 @@ const Emi = () => {
                 />
                 <div className={styles.dplabel}>
                     <label className={styles.dpstart}>0%</label>
-                    <b className={styles.bold}>{numWithCommas(downPayment)}</b>
+                    <b className={styles.bold}>{downPayment}</b>
                     <label className={styles.dpend}>100%</label>
                 </div>
                 <span>Loan per Month</span>
                 <span>
-                    Total Lone Amount -
-                    {numWithCommas((emi * tenure).toFixed(0))}
+                    Total EMI-
+                    {(emi * tenure).toFixed(0)}
                 </span>
 
                 <input
                     type="range"
                     value={emi}
-                    min={(calculateEMI(cost))}
+                    min={calculateEMI(cost)}
                     max={calculateEMI(0)}
                     onChange={updateDownPayment}
                 />
                 <div>
-                    <label> {numWithCommas(calculateEMI(cost))} start</label>
-                    <b>{numWithCommas(emi)}</b>
-                    <label className={styles.dpend}>{numWithCommas(calculateEMI(0))}</label>
+                    <label> {calculateEMI(cost)} start</label>
+                    <b>{emi}</b>
+                    <label className={styles.dpend}>{calculateEMI(0)}</label>
                 </div>
                 <span>Tenure</span>
                 <div className={styles.tenureContainer}>
@@ -135,9 +125,6 @@ const Emi = () => {
                             {t}
                         </button>
                     ))}
-                </div>
-                <div>
-                    <PieChart piData={piData}/>
                 </div>
             </div>
         </>

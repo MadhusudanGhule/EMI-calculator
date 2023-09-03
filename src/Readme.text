@@ -1,0 +1,58 @@
+Sure, here's a brief description of the sections and features for an "EMI Calculator with Pie Chart" project for a resume:
+
+1. **Title/Project Name:**
+   - **EMI Calculator with Pie Chart**
+
+2. **Introduction:**
+   - The project is an EMI (Equated Monthly Installment) calculator that helps users calculate their monthly loan repayment amount for a given loan amount, interest rate, and tenure. Additionally, it presents the calculated data in the form of a pie chart for better visualization.
+
+3. **Features:**
+
+   - **Input Fields:**
+     - Users can enter the following details:
+       - Total cost of assets (loan amount).
+       - Interest rate (in percentage).
+       - Processing fee (in percentage).
+       - Down payment amount.
+       - Loan tenure (in months).
+
+   - **EMI Calculation:**
+     - The application calculates the EMI based on the input provided using the standard EMI calculation formula.
+     - It considers the loan amount, interest rate, processing fee, down payment, and tenure to determine the monthly EMI.
+
+   - **Interactive Slider for Down Payment and EMI:**
+     - The project includes sliders that users can interact with to adjust the down payment or EMI amount.
+     - As users move the sliders, the EMI and down payment values are updated in real-time.
+
+   - **Pie Chart Visualization:**
+     - After calculating the EMI, the project displays the EMI amount as a portion of the total cost of assets in a pie chart.
+     - The pie chart offers a visual representation of how the EMI relates to the total cost of the asset.
+
+   - **Tenure Selection:**
+     - Users can select the loan tenure from predefined options using buttons.
+     - The selected tenure affects the EMI calculation, and the results are updated accordingly.
+
+   - **Total Down Payment and Total EMI Display:**
+     - The project displays the total down payment amount and the total EMI amount based on the selected tenure.
+     - Users can see these values alongside the sliders and pie chart for reference.
+
+   - **Responsive Design:**
+     - The application is designed to be responsive, ensuring a user-friendly experience on various devices and screen sizes.
+
+4. **Technologies Used:**
+   - The project is built using React for the frontend.
+   - React state and hooks are utilized for managing user input and dynamic updates.
+   - A charting library like Chart.js or D3.js is used to create the pie chart.
+
+5. **Skills Demonstrated:**
+   - React development, including state management and event handling.
+   - Mathematical calculations for EMI and down payment.
+   - Data visualization using charts.
+   - User interface design and responsiveness.
+
+6. **Conclusion:**
+   - The "EMI Calculator with Pie Chart" project demonstrates the ability to build a 
+   practical financial tool with an intuitive user interface. It provides users with a 
+   simple way to understand their loan repayment structure and visualize the impact of their
+    EMI on the total cost of the asset. This project showcases frontend development skills and the 
+    ability to work with data visualization libraries.
